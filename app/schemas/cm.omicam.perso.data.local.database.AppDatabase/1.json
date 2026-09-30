@@ -1,0 +1,116 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "6c748c777df8dff3fd4407a0f6c87350",
+    "entities": [
+      {
+        "tableName": "indexalphaomicam",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nom_complet` TEXT NOT NULL, `naissance` TEXT, `nationalite` TEXT, `fete` TEXT, `premiers_voeux` TEXT, `voeux_perpetuels` TEXT, `sacerdoce` TEXT, `numero_oblation` TEXT, `unite` TEXT, `email` TEXT, `telephone` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomComplet",
+            "columnName": "nom_complet",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "naissance",
+            "columnName": "naissance",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "nationalite",
+            "columnName": "nationalite",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "fete",
+            "columnName": "fete",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "premiersVoeux",
+            "columnName": "premiers_voeux",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "voeuxPerpetuels",
+            "columnName": "voeux_perpetuels",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sacerdoce",
+            "columnName": "sacerdoce",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "numeroOblation",
+            "columnName": "numero_oblation",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "unite",
+            "columnName": "unite",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "telephone",
+            "columnName": "telephone",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_indexalphaomicam_nom_complet",
+            "unique": false,
+            "columnNames": [
+              "nom_complet"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_indexalphaomicam_nom_complet` ON `${TABLE_NAME}` (`nom_complet`)"
+          },
+          {
+            "name": "index_indexalphaomicam_nationalite",
+            "unique": false,
+            "columnNames": [
+              "nationalite"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_indexalphaomicam_nationalite` ON `${TABLE_NAME}` (`nationalite`)"
+          },
+          {
+            "name": "index_indexalphaomicam_unite",
+            "unique": false,
+            "columnNames": [
+              "unite"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_indexalphaomicam_unite` ON `${TABLE_NAME}` (`unite`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6c748c777df8dff3fd4407a0f6c87350')"
+    ]
+  }
+}
